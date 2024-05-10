@@ -14,13 +14,29 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack {
-            List {
+            VStack {
                 NavigationLink {
                     WebViewContainer()
                 } label: {
                     Text("web")
+                        .font(.title)
+                        .padding()
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                NavigationLink {
+                    WebView2Container()
+                } label: {
+                    Text("2 web")
+                        .font(.title)
+                        .padding()
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
             }
+            .listStyle(.plain)
         }
     }
 

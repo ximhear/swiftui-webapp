@@ -15,6 +15,7 @@
 		EC2868E22BEDB8A400AE949C /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E12BEDB8A400AE949C /* WebViewContainer.swift */; };
 		EC2868E42BEDB8D400AE949C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E32BEDB8D400AE949C /* WebView.swift */; };
 		EC2868E62BEDB8F500AE949C /* WebViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */; };
+		EC2868E82BEDBDF100AE949C /* WebView2Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E72BEDBDF100AE949C /* WebView2Container.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		EC2868E12BEDB8A400AE949C /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
 		EC2868E32BEDB8D400AE949C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewModel.swift; sourceTree = "<group>"; };
+		EC2868E72BEDBDF100AE949C /* WebView2Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView2Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				EC2868D12BEDB3B500AE949C /* webappApp.swift */,
 				EC2868D32BEDB3B500AE949C /* ContentView.swift */,
+				EC2868E72BEDBDF100AE949C /* WebView2Container.swift */,
 				EC2868E12BEDB8A400AE949C /* WebViewContainer.swift */,
 				EC2868E32BEDB8D400AE949C /* WebView.swift */,
 				EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */,
@@ -154,6 +157,7 @@
 				EC2868E42BEDB8D400AE949C /* WebView.swift in Sources */,
 				EC2868E22BEDB8A400AE949C /* WebViewContainer.swift in Sources */,
 				EC2868D62BEDB3B500AE949C /* Item.swift in Sources */,
+				EC2868E82BEDBDF100AE949C /* WebView2Container.swift in Sources */,
 				EC2868D22BEDB3B500AE949C /* webappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
