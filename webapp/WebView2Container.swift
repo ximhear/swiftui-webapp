@@ -18,8 +18,8 @@ struct WebView2Container: View {
             HStack {
                 Group {
                     Button {
-                        csr.commandPublisher.send(.gotoUrl(URL(string: "https://nuxt3test-csr.vercel.app/")!))
                         ssr.commandPublisher.send(.gotoUrl(URL(string: "https://nuxt3test-ssr.vercel.app/")!))
+                        csr.commandPublisher.send(.gotoUrl(URL(string: "https://nuxt3test-csr.vercel.app/")!))
                     } label: {
                         Text("Go to")
                     }
