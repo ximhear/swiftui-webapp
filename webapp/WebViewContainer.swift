@@ -52,13 +52,3 @@ struct WebViewContainer: View {
 #Preview {
     WebViewContainer()
 }
-
-struct WButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding(8)
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-    }
-}

@@ -16,6 +16,7 @@
 		EC2868E42BEDB8D400AE949C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E32BEDB8D400AE949C /* WebView.swift */; };
 		EC2868E62BEDB8F500AE949C /* WebViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */; };
 		EC2868E82BEDBDF100AE949C /* WebView2Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E72BEDBDF100AE949C /* WebView2Container.swift */; };
+		EC2868EA2BEDC5FD00AE949C /* WButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E92BEDC5FD00AE949C /* WButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		EC2868E32BEDB8D400AE949C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewModel.swift; sourceTree = "<group>"; };
 		EC2868E72BEDBDF100AE949C /* WebView2Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView2Container.swift; sourceTree = "<group>"; };
+		EC2868E92BEDC5FD00AE949C /* WButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				EC2868D32BEDB3B500AE949C /* ContentView.swift */,
 				EC2868E72BEDBDF100AE949C /* WebView2Container.swift */,
 				EC2868E12BEDB8A400AE949C /* WebViewContainer.swift */,
+				EC2868E92BEDC5FD00AE949C /* WButtonStyle.swift */,
 				EC2868E32BEDB8D400AE949C /* WebView.swift */,
 				EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */,
 				EC2868D52BEDB3B500AE949C /* Item.swift */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC2868D42BEDB3B500AE949C /* ContentView.swift in Sources */,
+				EC2868EA2BEDC5FD00AE949C /* WButtonStyle.swift in Sources */,
 				EC2868E62BEDB8F500AE949C /* WebViewViewModel.swift in Sources */,
 				EC2868E42BEDB8D400AE949C /* WebView.swift in Sources */,
 				EC2868E22BEDB8A400AE949C /* WebViewContainer.swift in Sources */,
