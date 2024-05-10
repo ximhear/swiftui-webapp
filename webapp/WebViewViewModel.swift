@@ -85,6 +85,7 @@ class WebViewViewModel: NSObject, ObservableObject, WKNavigationDelegate, WKScri
     }
 
     private func loadURL(_ url: URL) {
+//        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
         let request = URLRequest(url: url)
         webView.load(request)
     }
