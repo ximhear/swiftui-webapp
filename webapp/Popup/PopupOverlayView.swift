@@ -38,6 +38,7 @@ class PopupOverlay: UIView {
             
             if let hostingView = self.hostingController?.view {
                 hostingView.translatesAutoresizingMaskIntoConstraints = false
+                hostingView.backgroundColor = .clear
                 self.addSubview(hostingView)
                 NSLayoutConstraint.activate([
                     hostingView.centerXAnchor.constraint(equalTo: self.centerXAnchor),

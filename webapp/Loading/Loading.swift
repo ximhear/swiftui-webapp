@@ -24,6 +24,7 @@ class LoadingOverlay: UIView {
         hostingController = UIHostingController(rootView: loadingView)
         if let hostingView = hostingController?.view {
             hostingView.translatesAutoresizingMaskIntoConstraints = false
+            hostingView.backgroundColor = .clear
             self.addSubview(hostingView)
             NSLayoutConstraint.activate([
                 hostingView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
