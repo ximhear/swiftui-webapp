@@ -44,6 +44,24 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                NavigationLink {
+                    LoadingTest()
+                } label: {
+                    Text("Loading Test")
+                        .padding()
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                NavigationLink {
+                    PopupTest()
+                } label: {
+                    Text("Popup Test")
+                        .padding()
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
             .listStyle(.plain)
         }

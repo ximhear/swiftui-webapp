@@ -19,6 +19,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             KeychainService.shared.deleteAllTokens()
             UserDefaults.standard.set(true, forKey: "didRunBefore")
         }
+        else {
+            if let value = KeychainService.shared.getToken(forKey: "test") {
+                GZLogFunc(value)
+            }
+        }
 
         return true
     }

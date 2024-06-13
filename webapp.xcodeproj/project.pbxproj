@@ -17,11 +17,19 @@
 		EC2868E62BEDB8F500AE949C /* WebViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */; };
 		EC2868E82BEDBDF100AE949C /* WebView2Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E72BEDBDF100AE949C /* WebView2Container.swift */; };
 		EC2868EA2BEDC5FD00AE949C /* WButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E92BEDC5FD00AE949C /* WButtonStyle.swift */; };
+		EC89EC4C2C1AF9040091A8F4 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89EC4B2C1AF9040091A8F4 /* Popup.swift */; };
 		EC8D00852C1AD13F004AACE1 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D00842C1AD13F004AACE1 /* KeychainService.swift */; };
 		EC8D00872C1AD19D004AACE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D00862C1AD19D004AACE1 /* AppDelegate.swift */; };
 		EC8D008A2C1AD283004AACE1 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D00892C1AD283004AACE1 /* Log.swift */; };
 		EC8D008D2C1AD766004AACE1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8D008C2C1AD766004AACE1 /* Launch Screen.storyboard */; };
 		EC8D008F2C1AD845004AACE1 /* KeyChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D008E2C1AD845004AACE1 /* KeyChainTest.swift */; };
+		EC8D00922C1ADDAA004AACE1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D00912C1ADDAA004AACE1 /* LoadingView.swift */; };
+		EC8D00942C1ADDDD004AACE1 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D00932C1ADDDD004AACE1 /* Loading.swift */; };
+		EC8D00962C1ADEEC004AACE1 /* LoadingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D00952C1ADEEC004AACE1 /* LoadingTest.swift */; };
+		ECA4564A2C1AF56D00E943ED /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA456492C1AF56D00E943ED /* PopupButton.swift */; };
+		ECA4564C2C1AF59400E943ED /* PopupOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4564B2C1AF59400E943ED /* PopupOverlayView.swift */; };
+		ECA4564E2C1AF5D600E943ED /* MessageBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4564D2C1AF5D600E943ED /* MessageBoxView.swift */; };
+		ECA456512C1AF73600E943ED /* PopupTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA456502C1AF73600E943ED /* PopupTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,12 +44,20 @@
 		EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewModel.swift; sourceTree = "<group>"; };
 		EC2868E72BEDBDF100AE949C /* WebView2Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView2Container.swift; sourceTree = "<group>"; };
 		EC2868E92BEDC5FD00AE949C /* WButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WButtonStyle.swift; sourceTree = "<group>"; };
+		EC89EC4B2C1AF9040091A8F4 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		EC8D00842C1AD13F004AACE1 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		EC8D00862C1AD19D004AACE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC8D00892C1AD283004AACE1 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		EC8D008B2C1AD451004AACE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EC8D008C2C1AD766004AACE1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		EC8D008E2C1AD845004AACE1 /* KeyChainTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainTest.swift; sourceTree = "<group>"; };
+		EC8D00912C1ADDAA004AACE1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		EC8D00932C1ADDDD004AACE1 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		EC8D00952C1ADEEC004AACE1 /* LoadingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTest.swift; sourceTree = "<group>"; };
+		ECA456492C1AF56D00E943ED /* PopupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupButton.swift; sourceTree = "<group>"; };
+		ECA4564B2C1AF59400E943ED /* PopupOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupOverlayView.swift; sourceTree = "<group>"; };
+		ECA4564D2C1AF5D600E943ED /* MessageBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBoxView.swift; sourceTree = "<group>"; };
+		ECA456502C1AF73600E943ED /* PopupTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +90,14 @@
 		EC2868D02BEDB3B500AE949C /* webapp */ = {
 			isa = PBXGroup;
 			children = (
+				ECA4564F2C1AF71E00E943ED /* Test */,
+				EC8D00972C1AE1CC004AACE1 /* Popup */,
+				EC8D00902C1ADD4B004AACE1 /* Loading */,
 				EC8D008B2C1AD451004AACE1 /* Info.plist */,
 				EC8D00882C1AD23F004AACE1 /* Log */,
 				EC8D00832C1AD116004AACE1 /* Token */,
 				EC2868D12BEDB3B500AE949C /* webappApp.swift */,
 				EC2868D32BEDB3B500AE949C /* ContentView.swift */,
-				EC8D008E2C1AD845004AACE1 /* KeyChainTest.swift */,
 				EC2868E72BEDBDF100AE949C /* WebView2Container.swift */,
 				EC2868E12BEDB8A400AE949C /* WebViewContainer.swift */,
 				EC2868E92BEDC5FD00AE949C /* WButtonStyle.swift */,
@@ -116,6 +134,36 @@
 				EC8D00892C1AD283004AACE1 /* Log.swift */,
 			);
 			path = Log;
+			sourceTree = "<group>";
+		};
+		EC8D00902C1ADD4B004AACE1 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D00912C1ADDAA004AACE1 /* LoadingView.swift */,
+				EC8D00932C1ADDDD004AACE1 /* Loading.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		EC8D00972C1AE1CC004AACE1 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				ECA456492C1AF56D00E943ED /* PopupButton.swift */,
+				ECA4564B2C1AF59400E943ED /* PopupOverlayView.swift */,
+				ECA4564D2C1AF5D600E943ED /* MessageBoxView.swift */,
+				EC89EC4B2C1AF9040091A8F4 /* Popup.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		ECA4564F2C1AF71E00E943ED /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D00952C1ADEEC004AACE1 /* LoadingTest.swift */,
+				EC8D008E2C1AD845004AACE1 /* KeyChainTest.swift */,
+				ECA456502C1AF73600E943ED /* PopupTest.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,15 +239,23 @@
 			files = (
 				EC2868D42BEDB3B500AE949C /* ContentView.swift in Sources */,
 				EC2868EA2BEDC5FD00AE949C /* WButtonStyle.swift in Sources */,
+				EC89EC4C2C1AF9040091A8F4 /* Popup.swift in Sources */,
 				EC8D008A2C1AD283004AACE1 /* Log.swift in Sources */,
+				ECA4564C2C1AF59400E943ED /* PopupOverlayView.swift in Sources */,
 				EC2868E62BEDB8F500AE949C /* WebViewViewModel.swift in Sources */,
+				EC8D00942C1ADDDD004AACE1 /* Loading.swift in Sources */,
 				EC2868E42BEDB8D400AE949C /* WebView.swift in Sources */,
+				EC8D00962C1ADEEC004AACE1 /* LoadingTest.swift in Sources */,
+				ECA4564E2C1AF5D600E943ED /* MessageBoxView.swift in Sources */,
 				EC8D008F2C1AD845004AACE1 /* KeyChainTest.swift in Sources */,
 				EC2868E22BEDB8A400AE949C /* WebViewContainer.swift in Sources */,
+				ECA456512C1AF73600E943ED /* PopupTest.swift in Sources */,
 				EC8D00852C1AD13F004AACE1 /* KeychainService.swift in Sources */,
 				EC2868D62BEDB3B500AE949C /* Item.swift in Sources */,
 				EC2868E82BEDBDF100AE949C /* WebView2Container.swift in Sources */,
+				ECA4564A2C1AF56D00E943ED /* PopupButton.swift in Sources */,
 				EC8D00872C1AD19D004AACE1 /* AppDelegate.swift in Sources */,
+				EC8D00922C1ADDAA004AACE1 /* LoadingView.swift in Sources */,
 				EC2868D22BEDB3B500AE949C /* webappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
