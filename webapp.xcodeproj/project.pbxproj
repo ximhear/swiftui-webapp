@@ -17,6 +17,9 @@
 		EC2868E62BEDB8F500AE949C /* WebViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */; };
 		EC2868E82BEDBDF100AE949C /* WebView2Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E72BEDBDF100AE949C /* WebView2Container.swift */; };
 		EC2868EA2BEDC5FD00AE949C /* WButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2868E92BEDC5FD00AE949C /* WButtonStyle.swift */; };
+		EC8D00852C1AD13F004AACE1 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D00842C1AD13F004AACE1 /* KeychainService.swift */; };
+		EC8D00872C1AD19D004AACE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D00862C1AD19D004AACE1 /* AppDelegate.swift */; };
+		EC8D008A2C1AD283004AACE1 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8D00892C1AD283004AACE1 /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewModel.swift; sourceTree = "<group>"; };
 		EC2868E72BEDBDF100AE949C /* WebView2Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView2Container.swift; sourceTree = "<group>"; };
 		EC2868E92BEDC5FD00AE949C /* WButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WButtonStyle.swift; sourceTree = "<group>"; };
+		EC8D00842C1AD13F004AACE1 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		EC8D00862C1AD19D004AACE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC8D00892C1AD283004AACE1 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,8 @@
 		EC2868D02BEDB3B500AE949C /* webapp */ = {
 			isa = PBXGroup;
 			children = (
+				EC8D00882C1AD23F004AACE1 /* Log */,
+				EC8D00832C1AD116004AACE1 /* Token */,
 				EC2868D12BEDB3B500AE949C /* webappApp.swift */,
 				EC2868D32BEDB3B500AE949C /* ContentView.swift */,
 				EC2868E72BEDBDF100AE949C /* WebView2Container.swift */,
@@ -70,6 +78,7 @@
 				EC2868E92BEDC5FD00AE949C /* WButtonStyle.swift */,
 				EC2868E32BEDB8D400AE949C /* WebView.swift */,
 				EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */,
+				EC8D00862C1AD19D004AACE1 /* AppDelegate.swift */,
 				EC2868D52BEDB3B500AE949C /* Item.swift */,
 				EC2868D72BEDB3B700AE949C /* Assets.xcassets */,
 				EC2868D92BEDB3B700AE949C /* Preview Content */,
@@ -83,6 +92,22 @@
 				EC2868DA2BEDB3B700AE949C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC8D00832C1AD116004AACE1 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D00842C1AD13F004AACE1 /* KeychainService.swift */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		EC8D00882C1AD23F004AACE1 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				EC8D00892C1AD283004AACE1 /* Log.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,11 +182,14 @@
 			files = (
 				EC2868D42BEDB3B500AE949C /* ContentView.swift in Sources */,
 				EC2868EA2BEDC5FD00AE949C /* WButtonStyle.swift in Sources */,
+				EC8D008A2C1AD283004AACE1 /* Log.swift in Sources */,
 				EC2868E62BEDB8F500AE949C /* WebViewViewModel.swift in Sources */,
 				EC2868E42BEDB8D400AE949C /* WebView.swift in Sources */,
 				EC2868E22BEDB8A400AE949C /* WebViewContainer.swift in Sources */,
+				EC8D00852C1AD13F004AACE1 /* KeychainService.swift in Sources */,
 				EC2868D62BEDB3B500AE949C /* Item.swift in Sources */,
 				EC2868E82BEDBDF100AE949C /* WebView2Container.swift in Sources */,
+				EC8D00872C1AD19D004AACE1 /* AppDelegate.swift in Sources */,
 				EC2868D22BEDB3B500AE949C /* webappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
