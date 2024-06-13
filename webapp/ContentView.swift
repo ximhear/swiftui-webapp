@@ -26,10 +26,19 @@ struct ContentView: View {
                         .cornerRadius(10)
                 }
                 NavigationLink {
-                    WebView2Container()
+                    WebViewContainer()
                 } label: {
-                    Text("2 web")
+                    Text("web")
                         .font(.title)
+                        .padding()
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                NavigationLink {
+                    KeyChainTest()
+                } label: {
+                    Text("KeyChain")
                         .padding()
                         .background(.blue)
                         .foregroundColor(.white)
