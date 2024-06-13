@@ -18,6 +18,7 @@ class PopupOverlay: UIView {
         self.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         self.isUserInteractionEnabled = true
         self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.alpha = 0 // 초기에는 투명하게 설정
     }
 
     required init?(coder: NSCoder) {
@@ -49,15 +50,22 @@ class PopupOverlay: UIView {
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                let window = windowScene.windows.first {
                 window.addSubview(self)
+                UIView.animate(withDuration: 0.3) {
+                    self.alpha = 1
+                }
             }
         }
     }
 
     func hide() {
         DispatchQueue.main.async {
-            self.hostingController?.view.removeFromSuperview()
-            self.hostingController = nil
-            self.removeFromSuperview()
+            UIView.animate(withDuration: 0.3, animations: {
+                self.alpha = 0
+            }) { _ in
+                self.hostingController?.view.removeFromSuperview()
+                self.hostingController = nil
+                self.removeFromSuperview()
+            }
         }
     }
 }
