@@ -19,6 +19,7 @@ class LoadingOverlay: UIView {
         self.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         self.isUserInteractionEnabled = true
         self.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.alpha = 0 // 초기에는 투명하게 설정
 
         let loadingView = LoadingView()
         hostingController = UIHostingController(rootView: loadingView)
@@ -46,6 +47,9 @@ class LoadingOverlay: UIView {
                 if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                    let window = windowScene.windows.first {
                     window.addSubview(self)
+                    UIView.animate(withDuration: 0.3) {
+                        self.alpha = 1
+                    }
                 }
             }
         }
@@ -55,7 +59,12 @@ class LoadingOverlay: UIView {
         DispatchQueue.main.async {
             self.count -= 1
             if self.count == 0 {
-                self.removeFromSuperview()
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.alpha = 0
+                }) { _ in
+                    self.removeFromSuperview()
+                }
             }
         }
     }

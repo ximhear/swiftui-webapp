@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct WebViewContainer: View {
-    @StateObject private var viewModel = WebViewViewModel(url: URL(string: "https://www.daum.net")!)
-    @State var url: String = "https://www.daum.net"
+    @StateObject private var viewModel = WebViewViewModel(url: URL(string: "https://nuxt-math.vercel.app")!)
+    @State var url: String = "https://nuxt-math.vercel.app"
 
     var body: some View {
         VStack(spacing: 8) {
