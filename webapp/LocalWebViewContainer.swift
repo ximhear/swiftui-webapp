@@ -1,15 +1,15 @@
 //
-//  WebViewContainer.swift
+//  LocalWebViewContainer.swift
 //  webapp
 //
-//  Created by gzonelee on 5/10/24.
+//  Created by gzonelee on 6/14/24.
 //
 
 import SwiftUI
 
-struct WebViewContainer: View {
-    @StateObject private var viewModel = WebViewViewModel(url: URL(string: "https://nuxt-math.vercel.app")!)
-    @State var url: String = "https://nuxt-math.vercel.app"
+struct LocalWebViewContainer: View {
+    @StateObject private var viewModel = WebViewViewModel(url: URL(string: "http://localhost:5173")!)
+    @State var url: String = "http://localhost:5173"
 
     var body: some View {
         VStack(spacing: 8) {
@@ -27,8 +27,8 @@ struct WebViewContainer: View {
             }
             .padding(.horizontal)
             .padding(.bottom, 4)
-            .background(.red.opacity(0.3))
-            
+            .background(.purple.opacity(0.3))
+
             WebView(viewModel: viewModel)
             VStack {
                 HStack {
@@ -48,7 +48,7 @@ struct WebViewContainer: View {
             }
             .padding(.top, 8)
             .frame(maxWidth: .infinity)
-            .background(.red.opacity(0.3))
+            .background(.purple.opacity(0.3))
             .ignoresSafeArea()
         }
     }

@@ -18,7 +18,7 @@ struct ContentView: View {
                 NavigationLink {
                     WebViewContainer()
                 } label: {
-                    Text("web")
+                    Text("nuxt-math")
                         .font(.title)
                         .padding()
                         .background(.blue)
@@ -26,9 +26,19 @@ struct ContentView: View {
                         .cornerRadius(10)
                 }
                 NavigationLink {
-                    WebViewContainer()
+                    LocalWebViewContainer()
                 } label: {
-                    Text("web")
+                    Text("localhost")
+                        .font(.title)
+                        .padding()
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                NavigationLink {
+                    WebView2Container()
+                } label: {
+                    Text("web compare")
                         .font(.title)
                         .padding()
                         .background(.blue)

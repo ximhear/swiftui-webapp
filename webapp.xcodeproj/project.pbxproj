@@ -30,6 +30,7 @@
 		ECA4564C2C1AF59400E943ED /* PopupOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4564B2C1AF59400E943ED /* PopupOverlayView.swift */; };
 		ECA4564E2C1AF5D600E943ED /* MessageBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4564D2C1AF5D600E943ED /* MessageBoxView.swift */; };
 		ECA456512C1AF73600E943ED /* PopupTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA456502C1AF73600E943ED /* PopupTest.swift */; };
+		ECD859BB2C1C31DB008144D5 /* LocalWebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD859BA2C1C31DB008144D5 /* LocalWebViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		ECA4564B2C1AF59400E943ED /* PopupOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupOverlayView.swift; sourceTree = "<group>"; };
 		ECA4564D2C1AF5D600E943ED /* MessageBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBoxView.swift; sourceTree = "<group>"; };
 		ECA456502C1AF73600E943ED /* PopupTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTest.swift; sourceTree = "<group>"; };
+		ECD859BA2C1C31DB008144D5 /* LocalWebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWebViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				EC2868D32BEDB3B500AE949C /* ContentView.swift */,
 				EC2868E72BEDBDF100AE949C /* WebView2Container.swift */,
 				EC2868E12BEDB8A400AE949C /* WebViewContainer.swift */,
+				ECD859BA2C1C31DB008144D5 /* LocalWebViewContainer.swift */,
 				EC2868E92BEDC5FD00AE949C /* WButtonStyle.swift */,
 				EC2868E32BEDB8D400AE949C /* WebView.swift */,
 				EC2868E52BEDB8F500AE949C /* WebViewViewModel.swift */,
@@ -243,6 +246,7 @@
 				EC8D008A2C1AD283004AACE1 /* Log.swift in Sources */,
 				ECA4564C2C1AF59400E943ED /* PopupOverlayView.swift in Sources */,
 				EC2868E62BEDB8F500AE949C /* WebViewViewModel.swift in Sources */,
+				ECD859BB2C1C31DB008144D5 /* LocalWebViewContainer.swift in Sources */,
 				EC8D00942C1ADDDD004AACE1 /* Loading.swift in Sources */,
 				EC2868E42BEDB8D400AE949C /* WebView.swift in Sources */,
 				EC8D00962C1ADEEC004AACE1 /* LoadingTest.swift in Sources */,

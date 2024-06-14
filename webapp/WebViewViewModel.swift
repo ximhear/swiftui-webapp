@@ -89,11 +89,31 @@ class WebViewViewModel: NSObject, ObservableObject, WKNavigationDelegate, WKScri
         let request = URLRequest(url: url)
         webView.load(request)
     }
-
+    
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if message.name == "jsToSwift", let messageBody = message.body as? String {
-            print("Received message from JS: \(messageBody)")
-            // Handle the message or notify SwiftUI view here
+        GZLogFunc("didReceive message: \(message.name)")
+        GZLogFunc("didReceive message: \(message.body)")
+        GZLogFunc("didReceive message: \(type(of: message.body))")
+        
+        if message.name == "jsToSwift", let messageBody = message.body as? Dictionary<String, Any> {
+            GZLogFunc(messageBody)
+            do {
+                // JSONSerialization을 사용하여 Dictionary를 Data로 변환
+                let jsonData = try JSONSerialization.data(withJSONObject: messageBody, options: [])
+                
+                // JSONDecoder를 사용하여 Data를 Decodable 객체로 변환
+                let decoder = JSONDecoder()
+                let body = try decoder.decode(ScriptMessageBody.self, from: jsonData)
+                if body.type == "getAccessToken" {
+                    let value = KeychainService.shared.getToken(forKey: "test")
+                    GZLogFunc(value)
+                    let script = "window.setAccessToken('\(value ?? "")')"
+                    GZLogFunc(script)
+                    webView.evaluateJavaScript(script)
+                }
+            } catch {
+                GZLogFunc("Failed to decode message body: \(error)")
+            }
         }
     }
 
@@ -107,4 +127,8 @@ enum WebViewCommand {
     case goForward
     case reload
     case gotoUrl(URL)
+}
+
+struct ScriptMessageBody: Decodable {
+    let type: String
 }
