@@ -111,6 +111,10 @@ class WebViewViewModel: NSObject, ObservableObject, WKNavigationDelegate, WKScri
                     GZLogFunc(script)
                     webView.evaluateJavaScript(script)
                 }
+                else if body.type == "saveAccessToken" {
+                    let body = try decoder.decode(SaveAccessTokenBody.self, from: jsonData)
+                    KeychainService.shared.saveToken(token: body.value, forKey: "test")
+                }
             } catch {
                 GZLogFunc("Failed to decode message body: \(error)")
             }
@@ -131,4 +135,8 @@ enum WebViewCommand {
 
 struct ScriptMessageBody: Decodable {
     let type: String
+}
+
+struct SaveAccessTokenBody: Decodable {
+    let value: String
 }
