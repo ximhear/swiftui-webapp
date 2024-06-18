@@ -8,6 +8,7 @@
 import Foundation
 import WebKit
 import Combine
+import PhotosUI
 
 class WeakWKScriptMessageHandler: NSObject, WKScriptMessageHandler {
     weak var delegate: WKScriptMessageHandler?
@@ -21,7 +22,7 @@ class WeakWKScriptMessageHandler: NSObject, WKScriptMessageHandler {
     }
 }
 
-class WebViewViewModel: NSObject, ObservableObject, WKNavigationDelegate, WKScriptMessageHandler {
+class WebViewViewModel: NSObject, ObservableObject, WKNavigationDelegate, WKScriptMessageHandler, UINavigationControllerDelegate {
     @Published var webView: WKWebView
     private var cancellables: Set<AnyCancellable> = []
 
@@ -115,6 +116,12 @@ class WebViewViewModel: NSObject, ObservableObject, WKNavigationDelegate, WKScri
                     let body = try decoder.decode(SaveAccessTokenBody.self, from: jsonData)
                     KeychainService.shared.saveToken(token: body.value, forKey: "test")
                 }
+                else if body.type == "takePhoto" {
+                    presentImagePicker(sourceType: .camera)
+                }
+                else if body.type == "pickPhoto" {
+                    presentPHPicker()
+                }
             } catch {
                 GZLogFunc("Failed to decode message body: \(error)")
             }
@@ -123,6 +130,76 @@ class WebViewViewModel: NSObject, ObservableObject, WKNavigationDelegate, WKScri
 
     deinit {
         webView.configuration.userContentController.removeScriptMessageHandler(forName: "jsToSwift")
+    }
+    
+    private func presentPHPicker() {
+        var config = PHPickerConfiguration()
+        config.filter = .images
+        config.selectionLimit = 1
+        
+        let picker = PHPickerViewController(configuration: config)
+        picker.delegate = self
+        present(picker)
+    }
+    
+    private func presentImagePicker(sourceType: UIImagePickerController.SourceType) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = sourceType
+        present(imagePicker)
+    }
+    
+    func present(_ viewController: UIViewController) {
+        // 현재 뷰 컨트롤러를 가져와서 UIImagePickerController를 표시
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let topController = windowScene.windows.first?.rootViewController {
+            topController.present(viewController, animated: true, completion: nil)
+        }
+    }
+    
+    func handleImageSelected(_ image: UIImage) {
+        // 이미지가 선택되었을 때의 처리 로직
+        guard let imageData = image.pngData() else { return }
+        let base64String = imageData.base64EncodedString()
+        let jsCode = "displayImage('data:image/png;base64,\(base64String)')"
+        
+        webView.evaluateJavaScript(jsCode, completionHandler: { (result, error) in
+            if let error = error {
+                GZLogFunc("Error executing JavaScript: \(error)")
+            } else {
+                GZLogFunc("JavaScript executed successfully")
+            }
+        })
+    }
+}
+
+extension WebViewViewModel: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        if let image = info[.originalImage] as? UIImage {
+            // 사진이 선택되거나 찍혔을 때의 처리 로직
+            handleImageSelected(image)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+    
+}
+
+extension WebViewViewModel: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        guard let result = results.first else { return }
+        result.itemProvider.loadObject(ofClass: UIImage.self) { (object, error) in
+            if let image = object as? UIImage {
+                DispatchQueue.main.async {[weak self] in
+                    self?.handleImageSelected(image)
+                }
+            }
+        }
     }
 }
 

@@ -10,6 +10,7 @@ import SwiftUI
 struct LocalWebViewContainer: View {
     @StateObject private var viewModel = WebViewViewModel(url: URL(string: "http://localhost:5173")!)
     @State var url: String = "http://localhost:5173"
+//    @State var url: String = "http://192.168.0.34:8080"
 
     var body: some View {
         VStack(spacing: 8) {
